@@ -1,7 +1,7 @@
 library(ggplot2)
 library(plotly)
 library(dplyr)
-
+library(scales)
 
 ef <- read.csv("INFO_201_Final_Project_Dataset.csv", stringsAsFactor = FALSE)
 
@@ -14,10 +14,10 @@ average_hf_by_year <- ef %>%
 
 hf_in_2018 <- ef %>%
   filter(year == 2018) %>%
- select(year, countries, hf_score)
+  select(year, countries, hf_score)
 
 max_hf_in_2018 <- hf_in_2018 %>%
-  filter(hf_score == max(hf_score , na.rm = TRUE))
+  filter(hf_score == max(hf_score, na.rm = TRUE))
 
 min_hf_in_2018 <- hf_in_2018 %>%
   filter(hf_score == min(hf_score, na.rm = TRUE))
@@ -32,7 +32,8 @@ server <- function(input, output) {
     total_hf_plot <- ggplot(data = filtered_df) +
       geom_line(mapping = aes(x = year, y = hf_score, color = countries)) +
       labs(title = "Total Human Freedom Scores by Country", x = "Year", y = "Human Freedom Scores", color = "Country") +
-      theme(plot.title = element_text(hjust = 0.5))
+      theme(plot.title = element_text(hjust = 0.5)) +
+      scale_x_continuous(breaks = pretty_breaks())
 
     return(total_hf_plot)
   })
