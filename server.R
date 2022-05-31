@@ -3,39 +3,37 @@ library(plotly)
 library(dplyr)
 
 
-climate_df <- read.csv("https://raw.githubusercontent.com/owid/co2-data/master/owid-co2-data.csv", stringsAsFactors = FALSE)
+ef <- read.csv("INFO_201_Final_Project_Dataset.csv", stringsAsFactor = FALSE)
 
-average_ghg_by_year <- climate_df %>% 
-  filter(year >= 1989) %>% 
-  group_by(year) %>% 
-  summarize_if(is.numeric, median, na.rm = TRUE) %>% 
-  select(year, total_ghg)
+average_hf_by_year <- ef %>%
+  filter(year >= 1989) %>%
+  group_by(year) %>%
+  summarize_if(is.numeric, median, na.rm = TRUE) %>%
+  select(year, hf_score)
 
 
-ghg_in_2018 <- climate_df %>% 
-  filter(year == 2018) %>% 
-  select(country, year, total_ghg)
+hf_in_2018 <- ef %>%
+  filter(year == 2018) %>%
+ select(year, countries, hf_score)
 
-max_ghg_in_2018 <- ghg_in_2018 %>% 
-  filter(total_ghg == max(total_ghg, na.rm = TRUE))
+max_hf_in_2018 <- hf_in_2018 %>%
+  filter(hf_score == max(hf_score , na.rm = TRUE))
 
-min_ghg_in_2018 <- ghg_in_2018 %>% 
-  filter(total_ghg == min(total_ghg, na.rm = TRUE))
-
-difference_in_10_years <- 43.78 - 36.52
+min_hf_in_2018 <- hf_in_2018 %>%
+  filter(hf_score == min(hf_score, na.rm = TRUE))
 
 
 server <- function(input, output) {
-  output$total_ghg_plot <- renderPlotly({
-    filtered_df <- climate_df %>%
-      filter(country %in% input$country_selection) %>%
+  output$total_hf_plot <- renderPlotly({
+    filtered_df <- ef %>%
+      filter(countries %in% input$country_selection) %>%
       filter(year >= input$year_selection[1] & year <= input$year_selection[2])
 
-    total_ghg_plot <- ggplot(data = filtered_df) +
-      geom_line(mapping = aes(x = year, y = total_ghg, color = country)) +
-      labs(title = "Total Greenhouse Gas emissions by Country", x = "Year", y = "Greenhouse Gas emmision (million tonnes)", color ="Country")+theme(plot.title = element_text(hjust = 0.5))
+    total_hf_plot <- ggplot(data = filtered_df) +
+      geom_line(mapping = aes(x = year, y = hf_score, color = countries)) +
+      labs(title = "Total Human Freedom Scores by Country", x = "Year", y = "Human Freedom Scores", color = "Country") +
+      theme(plot.title = element_text(hjust = 0.5))
 
-    return(total_ghg_plot)
+    return(total_hf_plot)
   })
 }
-

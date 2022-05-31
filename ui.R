@@ -1,7 +1,7 @@
 library(plotly)
 library(bslib)
 
-climate_df <- read.csv("https://raw.githubusercontent.com/owid/co2-data/master/owid-co2-data.csv", stringsAsFactors = FALSE)
+ef <- read.csv("INFO_201_Final_Project_Dataset.csv", stringsAsFactor = FALSE)
 
 # Manually Determine a BootSwatch Theme
 my_theme <- bs_theme(
@@ -30,7 +30,7 @@ sidebar_panel_widget <- sidebarPanel(
   selectInput(
     inputId = "country_selection",
     label = "Countries",
-    choices = climate_df$country,
+    choices = ef$countries,
     # True allows you to select multiple choices...
     multiple = TRUE,
     selected = "United States"
@@ -38,8 +38,8 @@ sidebar_panel_widget <- sidebarPanel(
   sliderInput(
     inputId = "year_selection",
     label = h3("Select Year"),
-    min = 1990,
-    max = 2020,
+    min = min(ef$year),
+    max = max(ef$year),
     sep = "",
     value = c(1990, 2020)
   )
@@ -48,12 +48,12 @@ sidebar_panel_widget <- sidebarPanel(
 # Put a plot in the middle of the page
 main_panel_plot <- mainPanel(
   # Make plot interactive
-  plotlyOutput(outputId = "total_ghg_plot")
+  plotlyOutput(outputId = "total_hf_plot")
 )
 
 # Climate tab  — combine sidebar panel and main panel
 tab_1 <- tabPanel(
-  "Tab 1",fluidPage(includeMarkdown("tab-1.md")),
+  "Tab 1", fluidPage(includeMarkdown("tab-1.md")),
   sidebarLayout(
     sidebar_panel_widget,
     main_panel_plot,
@@ -83,6 +83,8 @@ conclusion_tab <- tabPanel(
     includeMarkdown("conclusion.md"),
   )
 )
+
+
 ui <- navbarPage(
   # Select Theme
   theme = my_theme,
