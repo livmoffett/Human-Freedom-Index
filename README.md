@@ -4,8 +4,11 @@
 Authors: Vy Nguyen
 
 Aldo Meneses-Campos
+
 Mustafa Abdulkadir
+
 Camden Yu
+
 Olivia Moffett
 
 Link: Link to your Shiny App here
