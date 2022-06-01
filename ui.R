@@ -45,10 +45,33 @@ sidebar_panel_widget <- sidebarPanel(
   )
 )
 
+sidebar_panel_widget2 <- sidebarPanel(
+  selectInput(
+    inputId = "country_selection1",
+    label = "Countries",
+    choices = ef$countries,
+    # True allows you to select multiple choices...
+    multiple = TRUE,
+    selected = "United States"
+  ),
+  sliderInput(
+    inputId = "year_selection1",
+    label = h3("Select Year"),
+    min = min(ef$year),
+    max = max(ef$year),
+    sep = "",
+    value = c(1990, 2020)
+  )
+)
+
 # Put a plot in the middle of the page
 main_panel_plot <- mainPanel(
   # Make plot interactive
   plotlyOutput(outputId = "total_hf_plot")
+)
+
+main_panel_plot1 <- mainPanel(
+  plotlyOutput(outputId = "total_rank_plot")
 )
 
 # Climate tab  — combine sidebar panel and main panel
@@ -63,9 +86,11 @@ tab_1 <- tabPanel(
 tab_2 <- tabPanel(
   # Title of tab
   "Tab 2",
-  fluidPage(
-    includeMarkdown("tab-2.md"),
-  )
+  fluidPage(includeMarkdown("tab-2.md")),
+  sidebarLayout(
+    sidebar_panel_widget2,
+    main_panel_plot1,
+  ),
 )
 
 tab_3 <- tabPanel(
