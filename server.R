@@ -52,8 +52,8 @@ server <- function(input, output) {
   
   output$expression_plot<- renderPlotly({
     filtered_df <- ef %>%
-      filter(countries %in% input$country_selection1) %>%
-      filter(year >= input$year_selection1[1] & year <= input$year_selection1[2])
+      filter(countries %in% input$country_selection2) %>%
+      filter(year >= input$year_selection2[1] & year <= input$year_selection2[2])
     
     expression_plot <- ggplot(data = filtered_df) +
       geom_line(mapping = aes(x = year, y = hf_rank, color = countries)) +
