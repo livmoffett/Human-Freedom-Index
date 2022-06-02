@@ -1,4 +1,5 @@
-# Title of Your Final Project Here 
+# Introduction to the Human Freedom Index
+
 ## INFO 201 "Foundational Skills for Data Science" — Spring 2022
 
 Authors: Vy Nguyen
