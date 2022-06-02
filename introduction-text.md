@@ -6,18 +6,12 @@ This is the analysis of the Human Freedom Index from the Cato Institute’s rese
 Our project is centralized around observation of the world’s countries and what insights we can take from the Human Freedom Index. With this data, we are able to understand how oppressive the governments of certain nations are and how expressive the citizens are allowed to be.
 
 Some of the limitations of the dataset on Kaggle are that specific indicators, such as daughters inheritance, are missing significant data. Furthermore, there is a category named Rule of Law which includes mostly crime statistics. To try to maintain the integrity of the dataset, we have removed these specific indicators.
-  
-![2018 Freedom Score, from landgeist Appears to be using 
-    red = (0 - 5.75) 
-    orange = (5.75 - 7.15) 
-    lime = (7.15 - 8.2) 
-    green = (8.2 - 10)](2018-world-human-freedom-index-landgeist.png)
 
 <img src="2018-world-human-freedom-index-landgeist.png" alt="2018 Freedom Score, from landgeist Appears to be using 
     red = (0 - 5.75) 
     orange = (5.75 - 7.15) 
     lime = (7.15 - 8.2) 
-    green = (8.2 - 10)" style="width:400px;"/>
+    green = (8.2 - 10)" style="width:800px;"/>
 
 ## Our 3 research questions
 
