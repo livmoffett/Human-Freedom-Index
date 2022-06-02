@@ -11,7 +11,7 @@ Camden Yu
 
 Olivia Moffett
 
-Link: https://memo-rexx.shinyapps.io/final-project-memo-rexx/
+Link: https://mustafabd.shinyapps.io/final-project-memo-rexx/
 
 Please create the necessary files for your multi-page Shiny app in this GitHub repository. Consult the Canvas assignment for more details. Be sure to publish your app on Shinyapps.io.
 
