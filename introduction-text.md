@@ -1,6 +1,6 @@
 # Introduction to the Human Freedom Index
 This is the analysis of the Human Freedom Index from the Cato Institute’s research from 2008 to 2019.
-[Kaggle - The Human Freedom Index] (https://www.kaggle.com/datasets/gsutters/the-human-freedom-index?select=hfi_cc_2021.csv)
+[Kaggle - The Human Freedom Index](https://www.kaggle.com/datasets/gsutters/the-human-freedom-index?select=hfi_cc_2021.csv)
 
 Our project is centralized around observation of the world’s countries and what insights we can take from the Human Freedom Index. With this data, we are able to understand how oppressive the governments of certain nations are and how expressive the citizens are allowed to be.
 
