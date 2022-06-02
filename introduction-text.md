@@ -17,7 +17,7 @@ Some of the limitations of the dataset on Kaggle are that specific indicators, s
     red = (0 - 5.75) 
     orange = (5.75 - 7.15) 
     lime = (7.15 - 8.2) 
-    green = (8.2 - 10)" style="width:200px;"/>
+    green = (8.2 - 10)" style="width:1000px;"/>
 
 ## Our 3 research questions
 
