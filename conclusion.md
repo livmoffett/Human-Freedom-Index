@@ -4,8 +4,12 @@ After reviewing our dataset and the ways we explored the values, we summarized o
 
 With our **second graph**, we observe the ways in which the lowest and highest ranked countries have progressed and change through time. In analyzing the disparities in the highest and lowest ranked countries, we notice the ways in which governed countries are the most and least oppressive, uncovering even unanticipated results that most would not have considered. Our findings help us better understand how human freedom index scores vary in each country and the complications they possess. 
 
+The country we’ve observed with the highest human freedom score of 9.14/10 is Switzerland.
+In comparison, the country with the lowest score of 3.83/10 is the Syrian Arab Republic. Below we can analyze how these countries compare. 
+
+![alt text](Graph for conclusion.png)
+
 In our **third graph**, we can observe trends of the freedom of expression rankings that differ from factors such as culture and other social influences of the regions. In observing the movement of freedom of expression rankings, we can compare the potential impacts of culture and religion in the extent of expression with each region. With this, we gain insight on the limitations in expression upon the countries in which culture, religion, and social influences have been oppressed compared to the countries with higher freedom of expression scores.
 
 Keeping our research in mind, we focused on understanding how the human freedom index impacts the countries that we analyzed. The variations in scores with common and unexpected countries ranking the highest and lowest allow us to view the ethics surrounding how countries compare to one another even in different freedom rankings. Throughout our project, we can see patterns and differences in the countries ranking highest in human freedom and freedom of expression. The insights have allowed us to view the shifts and progression in human freedom and more as oppression in various countries change through time, some places more than others. 
 
-![alt text]()
