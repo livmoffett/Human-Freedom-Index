@@ -49,4 +49,19 @@ server <- function(input, output) {
       scale_x_continuous(breaks = pretty_breaks())
     return(total_rank_plot)
   })
+  
+  output$expression_plot<- renderPlotly({
+    filtered_df <- ef %>%
+      filter(countries %in% input$country_selection1) %>%
+      filter(year >= input$year_selection1[1] & year <= input$year_selection1[2])
+    
+    expression_plot <- ggplot(data = filtered_df) +
+      geom_line(mapping = aes(x = year, y = hf_rank, color = countries)) +
+      labs(title = "Freedom of Expression Score by Country", x = "Year", y = "Freedom of Expression", color = "Country") +
+      theme(plot.title = element_text(hjust = 0.5)) +
+      scale_x_continuous(breaks = pretty_breaks())
+    return(expression_plot)
+  })
+  
+  
 }

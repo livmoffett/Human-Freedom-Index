@@ -64,6 +64,25 @@ sidebar_panel_widget2 <- sidebarPanel(
   )
 )
 
+sidebar_panel_widget3 <- sidebarPanel(
+  selectInput(
+    inputId =  "country_selection2",
+    label = "Countries",
+    choices = ef$countries,
+    multiple = TRUE,
+    selected = "United States"
+  ),
+  sliderInput(
+    inputId = "year_selection2",
+    label = h3("Select Year"),
+    min = min(ef$year),
+    max = max(ef$year),
+    sep = "",
+    value = c(1990, 2020)
+  )
+ )
+
+
 # Put a plot in the middle of the page
 main_panel_plot <- mainPanel(
   # Make plot interactive
@@ -72,6 +91,10 @@ main_panel_plot <- mainPanel(
 
 main_panel_plot1 <- mainPanel(
   plotlyOutput(outputId = "total_rank_plot")
+)
+
+main_panel_plot2 <- mainPanel(
+  plotlyOutput( outputId = "expression_plot")
 )
 
 # Climate tab  — combine sidebar panel and main panel
@@ -96,10 +119,14 @@ tab_2 <- tabPanel(
 tab_3 <- tabPanel(
   # Title of tab
   "Tab 3",
-  fluidPage(
-    includeMarkdown("tab-3.md"),
-  )
+  fluidPage( includeMarkdown("tab-3.md")),
+  sidebarLayout(
+    sidebar_panel_widget3,
+    main_panel_plot2,
+  ),
 )
+  
+
 
 conclusion_tab <- tabPanel(
   # Title of tab
