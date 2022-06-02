@@ -11,7 +11,7 @@ my_theme <- bs_theme(
 )
 # Update BootSwatch Theme
 #my_theme <- bs_theme_update(my_theme, bootswatch = "yeti")
-my_theme <- bs_theme_update(my_theme, bootswatch = "cerulean") %>% 
+my_theme <- bs_theme_update(my_theme, bootswatch = "yeti") %>% 
   # Add custom styling from a scss file
   bs_add_rules(sass::sass_file("my_style.scss"))
 
