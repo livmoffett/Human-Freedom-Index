@@ -7,7 +7,7 @@ With our **second graph**, we observe the ways in which the lowest and highest r
 The country we’ve observed with the highest human freedom score of 9.14/10 is Switzerland.
 In comparison, the country with the lowest score of 3.83/10 is the Syrian Arab Republic. Below we can analyze how these countries compare. 
 
-![alt text](Graph for conclusion.png)
+<img src="Graph for conclusion.png" alt="alt text" style="width:800px;"/>
 
 In our **third graph**, we can observe trends of the freedom of expression rankings that differ from factors such as culture and other social influences of the regions. In observing the movement of freedom of expression rankings, we can compare the potential impacts of culture and religion in the extent of expression with each region. With this, we gain insight on the limitations in expression upon the countries in which culture, religion, and social influences have been oppressed compared to the countries with higher freedom of expression scores.
 
