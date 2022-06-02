@@ -10,7 +10,10 @@ my_theme <- bs_theme(
   primary = "#FCC780", # primary color
 )
 # Update BootSwatch Theme
-my_theme <- bs_theme_update(my_theme, bootswatch = "yeti")
+#my_theme <- bs_theme_update(my_theme, bootswatch = "yeti")
+my_theme <- bs_theme_update(my_theme, bootswatch = "cerulean") %>% 
+  # Add custom styling from a scss file
+  bs_add_rules(sass::sass_file("my_style.scss"))
 
 # bs_theme_preview(my_theme)
 
