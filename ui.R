@@ -102,7 +102,7 @@ main_panel_plot2 <- mainPanel(
 
 # Climate tab  — combine sidebar panel and main panel
 tab_1 <- tabPanel(
-  "Tab 1", fluidPage(includeMarkdown("tab-1.md")),
+  "Human Freedom Score", fluidPage(includeMarkdown("tab-1.md")),
   sidebarLayout(
     sidebar_panel_widget,
     main_panel_plot,
@@ -111,7 +111,7 @@ tab_1 <- tabPanel(
 
 tab_2 <- tabPanel(
   # Title of tab
-  "Tab 2",
+  "Human Freedom Rank",
   fluidPage(includeMarkdown("tab-2.md")),
   sidebarLayout(
     sidebar_panel_widget2,
@@ -121,7 +121,7 @@ tab_2 <- tabPanel(
 
 tab_3 <- tabPanel(
   # Title of tab
-  "Tab 3",
+  "Freedom of Expression",
   fluidPage( includeMarkdown("tab-3.md")),
   sidebarLayout(
     sidebar_panel_widget3,
