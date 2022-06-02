@@ -13,6 +13,12 @@ Some of the limitations of the dataset on Kaggle are that specific indicators, s
     lime = (7.15 - 8.2) 
     green = (8.2 - 10)" style="width:800px;"/>
 
+2018 Freedom Score, from Land Geist, who appears to be using 
+    red = (0 - 5.75) 
+    orange = (5.75 - 7.15) 
+    lime = (7.15 - 8.2) 
+    green = (8.2 - 10)
+
 ## Our 3 research questions
 
 Over the decade since data has been collected, how have the world’s countries’ scores shifted and does this tell us anything about shifts in certain regions of the world?
