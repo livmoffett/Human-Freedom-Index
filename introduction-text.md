@@ -13,6 +13,11 @@ Some of the limitations of the dataset on Kaggle are that specific indicators, s
     lime = (7.15 - 8.2) 
     green = (8.2 - 10)](2018-world-human-freedom-index-landgeist.png)
 
+<img src="2018-world-human-freedom-index-landgeist.png" alt="2018 Freedom Score, from landgeist Appears to be using 
+    red = (0 - 5.75) 
+    orange = (5.75 - 7.15) 
+    lime = (7.15 - 8.2) 
+    green = (8.2 - 10)" style="width:200px;"/>
 
 ## Our 3 research questions
 
